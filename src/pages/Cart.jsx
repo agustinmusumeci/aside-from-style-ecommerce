@@ -16,12 +16,11 @@ function Cart() {
     <main>
         <section className="fluid-container h-[70dvh]">
             <PageTitle title="Cart">
-                <p>
-                    <Link to="/">
-                    Home
-                    </Link> - <Link to="/products">
-                    Products
-                    </Link> -
+                <p className="flex items-center gap-2">
+                    <Link to="/">Home</Link> 
+                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
+                    <Link to="/products">Products</Link> 
+                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
                     Cart
                 </p>
             </PageTitle>
@@ -43,7 +42,6 @@ function Cart() {
                     No products have been added yet!
                 </p>
                 <NavigationButton url="/products" message="Go shopping"/>
-                {/* <Link className="bg-gray-200 py-[6px] px-5 rounded-md hover:bg-gray-400/40 duration-300 ease-in-out" to="/products">Go shopping</Link> */}
             </aside>
             }
             

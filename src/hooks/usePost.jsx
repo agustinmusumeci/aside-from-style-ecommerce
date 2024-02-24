@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
+import useSingIn from "react-auth-kit/hooks/useSignIn";
 
 function usePost(body, param) {
     
     const [ response, setResponse ] = useState();
 
-    const postData = async (body, param) => {
+    const navigate = useNavigate();
+
+    // Función encargada de almacenar la cookie con el token y user
+    const signIn = useSingIn();
+
+    const postData = async (body, param, isLogin) => {
         try {
-            // For a localhost server
-            // const response = await fetch(`http://localhost:4000/${param}`, {
-            //     method: "POST",
-            //     headers: {'Content-Type': 'application/json'},
-            //     body: JSON.stringify(body),
-            //     credentials: "omit"
-            // })
 
             const response = await fetch(`https://mongoecommerceapi.onrender.com/${param}`, {
                 method: "POST",
@@ -21,19 +21,40 @@ function usePost(body, param) {
                 credentials: "omit"
             })
 
-            const data = await response.json()
-            alert(data.message)
-            setResponse(data.message)
+            // Guardamos la respuesta
+            await setResponse(response)
 
+            // Destructuramos la respuesta
+            const { json } = response;
+
+            // Guardamos la información enviada por el backend
+            const data = await json.call(response)
+
+            // Firmamos el token
+            if (isLogin) {
+                if(signIn({
+                    auth: {
+                        token: data.token,
+                        type: 'Bearer'
+                    },
+                    userState: {
+                        user: body.user
+                    }
+                })) {
+                    // En caso de autenticarse, navegamos al panel de control
+                    navigate("/control-panel")
+                } 
+            }
+            
+            // Retornamos la información enviada por el backend
+            return data
             
         } catch (error) {
-            console.log("Posting modified data error - ", error)
+            console.error("Posting error - ", error)
         }
     }
 
-    useEffect(() => {postData(body, param)}, [])
-
-    return response
+    return { response, postData }
 }
 
 export default usePost

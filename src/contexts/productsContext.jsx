@@ -10,8 +10,6 @@ export const ProductsProvider = ( {children} ) => {
 
     // dotenv.config();
 
-    // const GETPRODUCTS = process.env.GETPRODUCTS
-
     const [data, setData] = useState([]);
     const response = useFetch("get-products-api");
     

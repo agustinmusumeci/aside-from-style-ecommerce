@@ -18,10 +18,12 @@ function Products() {
     <main>
         <section className="fluid-container min-h-[70dvh]">
             <PageTitle title="Products">
-                <p>
+                <p className="flex items-center gap-2">
                     <Link to="/">
                     Home
-                    </Link> - Products
+                    </Link> 
+                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
+                    Products
                 </p>
             </PageTitle>
             <Filters className=""/>
@@ -35,7 +37,5 @@ function Products() {
     </main>
     );
 }
-
-// flex flex-wrap justify-center xl:justify-center gap-5
 
 export default Products

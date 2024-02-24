@@ -14,6 +14,8 @@ function Modifier() {
 
     const { data } = useContext(ProductsContext);
 
+    const {response, postData} = usePost();
+
     const updateFromDB = (e, nameRef, descRef, priceRef, stockRef, id, categoryRef) => {
         e.preventDefault()
         const body = {  id: id,
@@ -24,24 +26,8 @@ function Modifier() {
                         category: categoryRef.current.value,
                         }
         
-        postModifiedData(body, "update-product-api")
-    }
-
-    const postModifiedData = async (body, param) => {
-        try {
-            const response = await fetch(`https://mongoecommerceapi.onrender.com/${param}`, {
-                method: "POST",
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(body),
-                credentials: "omit"
-            })
-
-            const data = await response.json()
-            alert(data.message)
-
-        } catch (error) {
-            console.log("Posting modified data error - ", error)
-        }
+        const response = postData(body, "update-product-api", false)
+        response.then(res => alert(res.message))
     }
 
     return (
