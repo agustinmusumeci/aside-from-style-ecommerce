@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font clamp */
+/* https: //utopia.fyi/clamp/calculator?a=350,1920,14—17.5|32—40|24—30|16—20 */
+
+html {
+  /* font-family: 'Quattrocento', serif !important; */
+  @apply text-black;
+  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  /* scrollbar-gutter: stable; */
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.875rem, 0.8262rem + 0.2229vi, 1.0938rem);
+}
+
+a{
+  @apply hover:text-dark/90 animate;
+}
+
+.fluid-container {
+  @apply m-auto;
+  width: min(1240px, calc(80% - 0dvw));
+}
+
+.xxl-title {
+  @apply text-center leading-10 uppercase font-semibold;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 1.8885rem + 0.5096vi, 2.5rem);
+}
+
+.xl-title {
+  @apply leading-9 uppercase mr-5 mb-5 mt-5 font-semibold;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 1.4164rem + 0.3822vi, 1.875rem);
+}
+
+.lg-title {
+  @apply text-xl leading-7 uppercase font-semibold;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 0.9443rem + 0.2548vi, 1.25rem);
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.animate {
+  @apply duration-300 ease-in-out;
+}
+
+input[name~="all"]:checked + p {
+  @apply bg-black text-white font-semibold animate;
+}
+
+.bg-light {
+  @apply bg-lightgray/20 hover:bg-lightgray/10;
+}
