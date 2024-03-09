@@ -27,7 +27,7 @@ function Confirmation() {
         });
         setTotal(subtotal)
 
-        cart.length == 0 && navigate("/cart")
+        cart.length == 0 && navigate("/aside-from-style-ecommerce/cart")
     }, [])
     
     const opacity = useOpacity()

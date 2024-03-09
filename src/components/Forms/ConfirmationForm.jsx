@@ -40,15 +40,6 @@ function ConfirmationForm() {
                     <p>Adress <span className="text-blue">*</span></p>
                     <input type="text" name="" className="w-full px-2 py-[3px] rounded-md bg-light" id="add-price" ref={priceRef} required={true}/>
                 </label>
-
-                {/* <div className="flex gap-5 flex-wrap">
-                    <button type="submit" className="px-5 py-[6px] bg-black text-white rounded-md hover:bg-black/80 hover:text-white animate">
-                        Add
-                    </button>
-                    <a type="" className="px-5 py-[6px] rounded-md border-[1px]  hover:bg-black hover:text-white animate cursor-pointer" onClick={() => handleReset(nameRef, descRef, priceRef, stockRef, categoryRef)}>
-                        Clear
-                    </a>
-                </div> */}
         </form>
     );
 }

@@ -10,10 +10,10 @@ function Footer() {
                 <aside>
                     <PageTitle title="Navigation" style="lg-title"/>
                     <ul className="text-lightgray/80">
-                        <li><Link to="/home">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/products">Products</Link></li>
-                        <li><Link to="/cart">Cart</Link></li>
+                        <li><Link to="/aside-from-style-ecommerce">Home</Link></li>
+                        <li><Link to="/aside-from-style-ecommerce/about">About</Link></li>
+                        <li><Link to="/aside-from-style-ecommerce/products">Products</Link></li>
+                        <li><Link to="/aside-from-style-ecommerce/cart">Cart</Link></li>
                     </ul>
                 </aside>
                 <aside>

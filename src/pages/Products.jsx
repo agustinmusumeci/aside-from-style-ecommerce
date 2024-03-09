@@ -19,10 +19,10 @@ function Products() {
         <section className="fluid-container min-h-[70dvh]">
             <PageTitle title="Products">
                 <p className="flex items-center gap-2">
-                    <Link to="/">
+                    <Link to="/aside-from-style-ecommerce">
                     Home
                     </Link> 
-                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
+                    <img src="./icons/icon_arrow.svg" className="h-2" alt=">"></img>
                     Products
                 </p>
             </PageTitle>

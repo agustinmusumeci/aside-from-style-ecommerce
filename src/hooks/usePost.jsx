@@ -42,7 +42,7 @@ function usePost(body, param) {
                     }
                 })) {
                     // En caso de autenticarse, navegamos al panel de control
-                    navigate("/control-panel")
+                    navigate("/aside-from-style-ecommerce/control-panel")
                 } 
             }
             

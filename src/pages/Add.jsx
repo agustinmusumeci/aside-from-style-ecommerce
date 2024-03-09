@@ -26,7 +26,7 @@ function Add() {
         <main>
             <section className="fluid-container">
                 <PageTitle title="Add Product" style="pb-5">
-                    <NavigationButton url="/control-panel" message="Go back"/>
+                    <NavigationButton url="/aside-from-style-ecommerce/control-panel" message="Go back"/>
                 </PageTitle>
             </section>
             <section>

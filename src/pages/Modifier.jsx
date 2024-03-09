@@ -34,7 +34,7 @@ function Modifier() {
         <main>
             <section className="fluid-container">
                 <PageTitle title={name + " config"} style="pb-5">
-                    <NavigationButton url="/control-panel" message="Go back"/>
+                    <NavigationButton url="/aside-from-style-ecommerce/control-panel" message="Go back"/>
                 </PageTitle>
                 <section>
                     {data && data.map( product => ( product.name == name && <ConfigForm name={product.name} price={product.price} desc={product.description} img={product.img} category={product.category} stock={product.stock} id={product._id} handleReset={useReset} updateFromDB={updateFromDB}/>))}

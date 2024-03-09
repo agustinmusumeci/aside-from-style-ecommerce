@@ -31,33 +31,33 @@ function App() {
   )
   
   return (
-    // establecemos el proveedor de cookies para la sesion del login
-    <AuthProvider store={store}>
-      <Router>
+      // establecemos el proveedor de cookies para la sesion del login<
+      
+      <AuthProvider store={store}>
+        <Router>
 
-        <Marque text="15% off within your first buy - Valid till may."/>
-        <Navbar/>
+          <Marque text="15% off within your first buy - Valid till may."/>
+          <Navbar/>
 
-        {/* establecemos que componente renderiza cada ruta */}
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/products/:name' element={<Detail/>}></Route>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/cart/confirmation' element={<Confirmation/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/' element={<Home/>}/>
-          <Route element={<AuthOutlet fallbackPath="/login"/>}>
-            <Route path='/control-panel' element={<ControlPanel/>}/>
-            <Route path='/control-panel/:name' element={<Modifier/>}/>
-            <Route path='/add-product' element={<Add/>}/>
-          </Route>
-        </Routes>
+          {/* establecemos que componente renderiza cada ruta */}
+          <Routes>
+            <Route path='/aside-from-style-ecommerce' element={<Home/>}/>
+            <Route path='/aside-from-style-ecommerce/products' element={<Products/>}/>
+            <Route path='/aside-from-style-ecommerce/about' element={<About/>}/>
+            <Route path='/aside-from-style-ecommerce/products/:name' element={<Detail/>}></Route>
+            <Route path='/aside-from-style-ecommerce/cart' element={<Cart/>}/>
+            <Route path='/aside-from-style-ecommerce/cart/confirmation' element={<Confirmation/>}/>
+            <Route path='/aside-from-style-ecommerce/login' element={<Login/>}/>
+            <Route element={<AuthOutlet fallbackPath="/aside-from-style-ecommerce/login"/>}>
+              <Route path='/aside-from-style-ecommerce/control-panel' element={<ControlPanel/>}/>
+              <Route path='/aside-from-style-ecommerce/control-panel/:name' element={<Modifier/>}/>
+              <Route path='/aside-from-style-ecommerce/control-panel/add-product' element={<Add/>}/>
+            </Route>
+          </Routes>
 
-      <Footer />
-      </Router>
-    </AuthProvider>
+        <Footer />
+        </Router>
+      </AuthProvider>
   );
 }
 

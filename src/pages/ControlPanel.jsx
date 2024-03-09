@@ -33,7 +33,7 @@ function ControlPanel() {
 
     const logOut = () => {
         singOut();
-        navigate("/login")
+        navigate("/aside-from-style-ecommerce/login")
     }
 
     const removeFromDB = async (body, param) => {
@@ -66,13 +66,13 @@ function ControlPanel() {
         <main>
             <section className="fluid-container">
                 <PageTitle title="Control Panel" style="pb-5">
-                    <NavigationButton url="/login" message="Log out" onClick={logOut}/>
+                    <NavigationButton url="/aside-from-style-ecommerce/login" message="Log out" onClick={logOut}/>
                 </PageTitle>
                 <div className="mb-10 mt-5">
                 <Filters></Filters>
                 </div>
                 <section>
-                    <Link to="../add-product">
+                    <Link to="./add-product">
                         <article id="addProductCard" className="flex gap-5 flex-wrap justify-start p-5 bg-lightgray/20 rounded-md hover:bg-gray-400/50 duration-300 ease-in-out">
                             <p>Add product</p>
                         </article>

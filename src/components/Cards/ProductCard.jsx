@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function ProductCard({name, price, desc, stock, img, id, category, featured, loading, opacity}) {
-    const URL = `/products/${name}`
+    const URL = `/aside-from-style-ecommerce/products/${name}`
 
     return (
         <article className="relative">

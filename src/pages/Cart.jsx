@@ -14,13 +14,13 @@ function Cart() {
 
     return (
     <main>
-        <section className="fluid-container h-[70dvh]">
+        <section className="fluid-container min-h-[70dvh]">
             <PageTitle title="Cart">
                 <p className="flex items-center gap-2">
-                    <Link to="/">Home</Link> 
-                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
-                    <Link to="/products">Products</Link> 
-                    <img src="../../icons/icon_arrow.svg" className="h-2" alt=">"></img>
+                    <Link to="/aside-from-style-ecommerce">Home</Link> 
+                    <img src="./icons/icon_arrow.svg" className="h-2" alt=">"></img>
+                    <Link to="/aside-from-style-ecommerce/products">Products</Link> 
+                    <img src="./icons/icon_arrow.svg" className="h-2" alt=">"></img>
                     Cart
                 </p>
             </PageTitle>
@@ -41,7 +41,7 @@ function Cart() {
                 <p className="mb-5">
                     No products have been added yet!
                 </p>
-                <NavigationButton url="/products" message="Go shopping"/>
+                <NavigationButton url="/aside-from-style-ecommerce/products" message="Go shopping"/>
             </aside>
             }
             
